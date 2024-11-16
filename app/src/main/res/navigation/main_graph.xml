@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/firstjmFragment">
+
+    <fragment
+        android:id="@+id/firstjmFragment"
+        android:name="com.fjmv.componente24.FirstjmFragment"
+        android:label="fragment_firstjm"
+        tools:layout="@layout/fragment_firstjm" >
+        <action
+            android:id="@+id/action_firstjmFragment_to_secondjmFragment"
+            app:destination="@id/secondjmFragment" />
+        <action
+            android:id="@+id/action_firstjmFragment_to_secondjmFragment2"
+            app:destination="@id/secondjmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondjmFragment"
+        android:name="com.fjmv.componente24.SecondjmFragment"
+        android:label="fragment_secondjm"
+        tools:layout="@layout/fragment_secondjm" >
+        <action
+            android:id="@+id/action_secondjmFragment_to_thirdjmFragment"
+            app:destination="@id/thirdjmFragment" />
+        <action
+            android:id="@+id/action_secondjmFragment_to_thirdjmFragment2"
+            app:destination="@id/thirdjmFragment" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="Guest" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdjmFragment"
+        android:name="com.fjmv.componente24.ThirdjmFragment"
+        android:label="fragment_thirdjm"
+        tools:layout="@layout/fragment_thirdjm" />
+</navigation>
